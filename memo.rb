@@ -16,7 +16,7 @@ memo_type = gets.to_s.chomp
         file_name = gets.chomp
         puts "編集内容を入力してください。"
         puts "完了したらCtrl + Dをおします"
-        CSV.open("#{file_name}.csv", "w") do |memo|
+        CSV.open("#{file_name}.csv", "a") do |memo|
         content = readlines
         memo << content
         end
